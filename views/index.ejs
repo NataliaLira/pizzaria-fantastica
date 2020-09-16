@@ -14,90 +14,15 @@
 		<button type="submit">Buscar</button>
 	</form>
 	<main>
+		<% listaPizzas.forEach( (pizza)=>{  %>
 		<article>
 			<img src="/img/calabresa.jpg" alt="calabresa">
 			<a href="/pizza/1">Ver Mais</a>
 			<button>+ Add</button>
-			<div>Calabresa</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/fracatu.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Fracatu</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/marguerita.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Marguerita</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/quatroqueijos.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Quatro Queijos</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/calabresa.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Calabresa</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/fracatu.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Fracatu</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/marguerita.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Marguerita</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/quatroqueijos.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Quatro Queijos</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/calabresa.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Calabresa</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/fracatu.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Fracatu</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/marguerita.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Marguerita</div>
-			<span>R$30,00</span>
-        </article>
-        <article>
-			<img src="img/quatroqueijos.jpg" alt="calabresa">
-			<a href="pizza.html">Ver Mais</a>
-			<button>+ Add</button>
-			<div>Quatro Queijos</div>
-			<span>R$30,00</span>
-        </article>
+			<div><%= pizza.nome %></div>
+			<span><%= pizza.preco %></span>
+		</article>
+		<% })%>
     </main>
 
 </body>
