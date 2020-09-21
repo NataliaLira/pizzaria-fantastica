@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pizzaria Fantastica</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<link rel="stylesheet" href="/css/form-pizza.css">
+<form id="form-pizza" method="POST" action="/cadastrar">
+	<label>
+		Nome:
+		<input type="text" name="nome" id="nome" placeholder="Digite o nome da pizza">
+	</label>
+	<label>
+		Ingredientes:
+		<input type="text" name="ingredientes" id="ingredientes" placeholder="Ingredientes (separados por vírgula)">
+	</label>
+	<label>
+		Preço:
+		<input type="number" name="preco" id="preco" step="0.01" placeholder="Digite o preço da pizza">
+	</label>
+	<label>
+		Foto:
+		<img src="/img/no-image.png">
+		<div>Clique para selecione nova imagem</div>
+		<input type="file" name="img" id="img">
+	</label>
+	<button type="submit">Salvar</button>
+</form>
+</body>
+</html>

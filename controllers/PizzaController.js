@@ -8,7 +8,11 @@ const PizzaController = {
     },
     show: (req, res) => {
         let id = req.params.id;
-        res.render('pizza');
+        let pizza = listaPizzas.find(
+            (pizza) => { return pizza.id == id }
+        )
+        
+        res.render('pizza', { pizza });
     },
     create: (req, res) => {
         res.render('create-pizza');

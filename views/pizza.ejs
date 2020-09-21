@@ -14,10 +14,10 @@
         <a href="/"><button>&larr; Voltar Página Inicial</button></a>
     </header>
 	<main>
-		<h1>Calabresa</h1>
-		<h2>R$ 30,00</h2>
-		<img src="/img/calabresa.jpg">
-		<div>Ingredientes: Mussarela, Cebola e Calabresa</div>
+		<h1> <%= pizza.nome %> </h1>
+		<h2><%= pizza.preco %></h2>
+		<img src="<%= pizza.img == "" ? "/img/no-image.png" : pizza.img  %>">
+		<div>Ingredientes: <%= pizza.ingredientes.join(', ') %></div>
 		<button>+ Add</button>
     </main>
 
