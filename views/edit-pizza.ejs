@@ -9,18 +9,18 @@
 </head>
 <body>
 <link rel="stylesheet" href="/css/form-pizza.css">
-<form id="form-pizza" method="POST" action="/cadastrar">
+<form id="form-pizza" method="POST" action="/editar/<%= pizza.id %>?_method=PUT">
 	<label>
 		Nome:
-		<input type="text" name="nome" id="nome" placeholder="Digite o nome da pizza">
+		<input type="text" name="nome" id="nome" placeholder="Digite o nome da pizza" value="<%= pizza.nome %>">
 	</label>
 	<label>
 		Ingredientes:
-		<input type="text" name="ingredientes" id="ingredientes" placeholder="Ingredientes (separados por vírgula)">
+		<input type="text" name="ingredientes" id="ingredientes" placeholder="Ingredientes (separados por vírgula)" value="<%= pizza.ingredientes.join(', ') %>">
 	</label>
 	<label>
 		Preço:
-		<input type="number" name="preco" id="preco" step="0.01" placeholder="Digite o preço da pizza">
+		<input type="number" name="preco" id="preco" step="0.01" placeholder="Digite o preço da pizza" value="<%= pizza.preco %>">
 	</label>
 	<label>
 		Foto:

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PizzaController = {
+
     index: (req, res) => {
         res.render('index', { listaPizzas });
     },
@@ -11,7 +12,6 @@ const PizzaController = {
         let pizza = listaPizzas.find(
             (pizza) => { return pizza.id == id }
         )
-        
         res.render('pizza', { pizza });
     },
     create: (req, res) => {
@@ -36,6 +36,27 @@ const PizzaController = {
 
         fs.writeFileSync(path.join('database', 'listaPizza.json'), JSON.stringify(listaPizzas));
         
+        res.redirect('/');
+    },
+    edit: (req, res) => {
+        let id = req.params.id;
+        let pizza = listaPizzas.find((pizza) => {
+            return pizza.id == id
+        })
+        res.render('edit-pizza', { pizza })
+    },
+    update: (req, res)=>{
+        let id = req.params.id;
+        let pizza = listaPizzas.find((pizza) => {
+            return pizza.id == id
+        })
+
+        let { nome, ingredientes , preco } = req.body;
+        pizza.nome = nome;
+        pizza.preco = preco;
+        pizza.ingredientes = ingredientes.split(',');
+        fs.writeFileSync(path.join('database', 'listaPizza.json'), JSON.stringify(listaPizzas));
+
         res.redirect('/');
     }
 }

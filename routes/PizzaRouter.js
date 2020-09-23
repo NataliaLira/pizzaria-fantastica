@@ -7,5 +7,6 @@ Router.get('/pizza/:id', PizzaController.show);
 Router.get('/cadastrar', PizzaController.create);
 Router.post('/cadastrar', PizzaController.store);
 Router.get('/editar/:id', PizzaController.edit);
+Router.put('/editar/:id', PizzaController.update);
 
 module.exports = Router;
