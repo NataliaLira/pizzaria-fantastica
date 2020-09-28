@@ -16,8 +16,8 @@
 	<main>
 		<% listaPizzas.forEach( (pizza)=>{  %>
 		<article>
-			<img src="/img/calabresa.jpg" alt="calabresa">
-			<a href="/pizza/1">Ver Mais</a>
+			<img src="<%= pizza.img %>" alt="calabresa">
+			<a href="/pizza/<%= pizza.id %>">Ver Mais</a>
 			<button>+ Add</button>
 			<div><%= pizza.nome %></div>
 			<span><%= pizza.preco %></span>

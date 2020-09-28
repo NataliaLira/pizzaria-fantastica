@@ -22,6 +22,9 @@ const PizzaController = {
         //transformando string em array de ingradientes
         ingredientes = ingredientes.split(',');
 
+        //separando nome img
+        let img = '/img/pizzas/'+req.files[0].originalname;
+
         // criando lógica do número de id do registro
         let id = listaPizzas.length + 1;
        
@@ -30,7 +33,7 @@ const PizzaController = {
             id: id,
             nome: nome,
             preco:preco,
-            img: '',
+            img: img,
             ingredientes: ingredientes
         });
 
