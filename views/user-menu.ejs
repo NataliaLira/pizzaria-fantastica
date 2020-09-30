@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pizzaria Fantastica</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body><link rel="stylesheet" href="/css/user-menu.css">
+<nav id="nav-adm">
+    <div>
+        Pizzaria Fantástica
+        <span>
+            Área Administrativa
+        </span>
+    </div>
+    <ul>
+        <li class="selected"><a href="/user/">Pizzas</a></li>
+        <li><a href="/cadastrar">Cadastrar Pizza</a></li>
+        <li><a href="#">Sair</a></li>
+    </ul>
+</nav>
+<main>
+    <% listaPizzas.forEach( (pizza)=>{  %>
+    <div>
+        <h4><%= pizza.nome %></h4>
+        <a href="/editar/<%= pizza.id %>"><button>Editar</button></a>
+    </div>
+    <% })%>
+</main>
+</body></html>

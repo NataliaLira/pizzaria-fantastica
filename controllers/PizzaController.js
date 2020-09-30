@@ -7,6 +7,7 @@ const PizzaController = {
     index: (req, res) => {
         res.render('index', { listaPizzas });
     },
+    
     show: (req, res) => {
         let id = req.params.id;
         let pizza = listaPizzas.find(

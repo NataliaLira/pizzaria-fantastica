@@ -1,0 +1,74 @@
+#nav-adm{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    color: #FFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#nav-adm div{
+    padding: 10px;
+    font-size: 2rem;
+}
+#nav-adm div span{
+    font-size: 0.8rem;
+    display: block;
+}
+#nav-adm ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#nav-adm ul li {
+    display: block;
+}
+
+#nav-adm ul li a{
+    display: flex;
+    padding: 20px;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #666;
+}
+
+#nav-adm ul li.selected a{
+    background-color: rgba(255,255,255,0.2);
+    color: #FFF;
+}
+
+#nav-adm ul li a:hover{
+    background-color: rgba(0,0,0,0.5);
+    text-decoration: none;
+    color: #E0E0E0;
+}
+main{
+    margin-top: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main div{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1% 4%;
+    background-color: #33333387;
+    box-shadow: 0px 0px 7px #776f6f;
+    padding: 1%;
+}
+main button{
+    flex-grow: 0;
+	flex-shrink: 0;;
+	background-color: rgb(255, 81, 0);
+	color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
